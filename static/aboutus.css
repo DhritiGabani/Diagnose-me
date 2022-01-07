@@ -1,5 +1,5 @@
 body {
-  background-image: url("background3.png");
+  /* background-image: url("background3.png"); */
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: 100%;
@@ -41,7 +41,7 @@ body {
   font-family: "DM Serif Display", serif;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  color: #ff7a00;
+  color: #b2cbfc;
   width: fit-content;
 }
 

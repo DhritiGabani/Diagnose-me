@@ -1,5 +1,5 @@
 body {
-  background-image: url("background2.png");
+  /* background-image: url("background2.png"); */
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: 100%;
@@ -25,7 +25,7 @@ body {
 .resultCat {
   display: block;
   font-family: "DM Sans";
-  color: #ff9000;
+  color: #b2cbfc;
   font-weight: bold;
   letter-spacing: 0.04em;
   font-size: larger;
@@ -40,11 +40,11 @@ body {
   border-radius: 5px;
   letter-spacing: 0.05em;
   font-family: "Roboto", sans;
-  box-shadow: 10px 10px 20px rgba(255, 144, 0, 0.18);
+  box-shadow: 5px 10px 18px #888888;
   border: none;
-  background: #ffa31a;
+  background: #b2cbfc;
   margin-right: 5px;
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
 }
@@ -57,11 +57,11 @@ body {
   border-radius: 5px;
   letter-spacing: 0.05em;
   font-family: "Roboto", sans;
-  box-shadow: 10px 10px 20px rgba(255, 144, 0, 0.18);
+  box-shadow: 5px 10px 18px #888888;
   border: none;
-  background: #ffa31a;
+  background: #b2cbfc;
   margin-right: 5px;
-  color: black;
+  color: white;
   font-size: large;
   font-weight: bold;
 }

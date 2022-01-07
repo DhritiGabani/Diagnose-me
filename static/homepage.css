@@ -16,8 +16,8 @@ body {
   width: 65%;
   display: block;
   border-radius: 15px;
-  box-shadow: -15px -15px 50px 2px rgba(0, 0, 0, 0.06),
-    15px 15px 50px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: -10px -10px 30px 4px rgb(199, 216, 250),
+    10px 10px 20px 4px rgb(199, 216, 250);
 }
 
 .cardTitle {
@@ -43,7 +43,7 @@ body {
 .imgBox1 {
   margin: 0;
   padding: 0;
-  /* border: 1px solid yellowgreen; */
+  border: 1px solid grey;
   border-radius: 15px 15px 0 0;
   height: 135px;
   width: 100%;
@@ -63,7 +63,7 @@ body {
   padding: 0px;
   border-radius: 5px;
   border: none;
-  background: #ff9000;
+  background: #b2cbfc;
   margin-right: 5px;
   color: white;
   font-size: small;
@@ -113,8 +113,8 @@ body {
   margin-top: -20px;
   height: 20%;
   visibility: visible;
-  box-shadow: -25px -25px 50px 2px rgba(0, 0, 0, 0.2),
-    25px 25px 50px 2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: -10px -10px 30px 4px rgb(208, 221, 248),
+    10px 10px 30px 4px rgb(208, 221, 248); */
 }
 
 .card1:hover .cell {
@@ -134,12 +134,12 @@ body {
   width: 40vw;
 }
 
-.cell {
+/* .cell {
   position: absolute;
   height: 8rem;
   top: -3.5rem;
   left: 1.5rem;
-}
+} */
 
 .aboutUsUP {
   position: absolute;
@@ -148,7 +148,7 @@ body {
   right: 1.5rem;
   top: 0rem;
   color: #212121;
-  border-bottom: 2px solid #ff9000;
+  border-bottom: 2px solid #b2cbfc;
   margin: 1.5rem 1.5rem 0 0;
 }
 
@@ -166,7 +166,7 @@ body {
   position: relative;
   font-family: "DM Serif Display", serif;
   font-size: x-large;
-  border-top: 2px solid #ff9000;
+  border-top: 2px solid #b2cbfc;
   color: #212121;
   padding: 1rem;
   display: none;
@@ -190,12 +190,12 @@ body {
   }
 
   .aboutUsUP {
-    /* position:absolute; font-family: 'DM Serif Display', serif; font-size: x-large; bottom: 0;border-top: 2px solid #FF9000; padding: 1rem; */
+    /* position:absolute; font-family: 'DM Serif Display', serif; font-size: x-large; bottom: 0;border-top: 2px solid #B2CBFC; padding: 1rem; */
     display: none;
   }
 
   .aboutUsDown {
-    /* position:absolute; font-family: 'DM Serif Display', serif; font-size: x-large; bottom: 0;border-top: 2px solid #FF9000; padding: 1rem; */
+    /* position:absolute; font-family: 'DM Serif Display', serif; font-size: x-large; bottom: 0;border-top: 2px solid #B2CBFC; padding: 1rem; */
     display: block;
   }
 }
