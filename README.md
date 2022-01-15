@@ -5,6 +5,7 @@
 </center>
 
 A web application powered by deep learning to predict respiratory disorders, heart diseases, and parkinson's disease with just an image, audio, or text input from users.
+
 ![Bot Description](https://github.com/DhritiGabani/Diagnose-me/blob/master/UI%20Design/homepage.png?raw=true)
 ## Technologies used
 
@@ -35,9 +36,8 @@ The disease classified from the model are
 - Asthma
 - Bronchitis
 
-
 ## Heart Disease Diagnosis
-![Bot Description](https://github.com/DhritiGabani/Diagnose-me/blob/master/UI%20Design/respiratory.png?raw=true)
+![Bot Description](https://github.com/DhritiGabani/Diagnose-me/blob/master/UI%20Design/heartdisease.png?raw=true)
 
 Heart Disease describes a range of conditions that affect your heart. This can be cause by many factors. But using some information from day to day life, it can be effective to know to get an appointment with this project. Here, we take previous medical records of patients like Maximum Heart Rate Achieved, Blood Pressure, Cholestrol Levels, Exercise-induced Agina, Age etc. A Random Forest Classifier is trained to take these as an input and make a binary decision to predict whether the fed inputs imply chances of getting a heart disease.
 
