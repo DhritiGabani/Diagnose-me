@@ -7,7 +7,7 @@
 A web application powered by deep learning to predict respiratory disorders, heart diseases, and parkinson's disease with just an image, audio, or text input from users.
 
 ## Link to the web app
-http://diagnose-me.herokuapp.com
+http://diagnose-me.herokuapp.com <br/>
 Please wait for a minute for the web app to load as it is deployed on Heroku.
 
 
