@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respiratory Disease Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/FullPage.css') }}"
+    />
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- GOOGLE ROBOTO & DM SERIF FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Reem+Kufi&family=DM+Sans&family=Roboto:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
+      integrity="sha512-YUkaLm+KJ5lQXDBdqBqk7EVhJAdxRnVdT2vtCzwPHSweCzyMgYV/tgGF4/dCyqtCC2eCphz0lRQgatGVdfR0ww=="
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    <div class="cont">
+      <div class="logoMini">
+        <div>
+          <img
+            src="../static/assets/LogoTitle.png"
+            alt=""
+            style="width: 20rem; margin-top: 7px"
+          />
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; width: fit-content">
+        <img
+            src="../static/assets/GitHub-Mark-64px 3.png"
+            alt="GitHub-Mark-64px 3.png"
+            style="height: 1.7rem; width: 1.7rem; margin-left: 5px; margin-right: 2rem"
+        />
+        <a
+          href="https://www.kaggle.com/vbookshelf/respiratory-sound-database"
+          style="color: #212121; text-decoration: none"
+          target="_blank"
+          ><span
+            style="
+              font-size: 1.5rem;
+              font-family: 'Reem Kufi', sans;
+              padding-top: 5px;
+            "
+            >kaggle</span
+          >
+        </a>
+      </div>
+
+      <h2
+        style="
+          font-family: 'DM Serif Display', serif;
+          margin-top: 0.5rem;
+          width: fit-content;
+        "
+      >
+        Multi-Respiratory Disease Diagnosis
+      </h2>
+
+      <p
+        style="
+          font-size: large;
+          letter-spacing: 0.5px;
+          margin: 1.5rem 0;
+          font-family: 'DM Sans', 'sans';
+        "
+      >
+        The sound emitted when a person breathes is directly <br />changes
+        within lung tissue and the position of secretions <br />within the lung.
+        This, if captured, opens up the possibility of <br />diagnosing
+        disorders like asthma, pneumonia and <br />bronchiolitis, to name a few.
+        Here in this project we capture <br />that information as an audio using
+        <span style="color: #1a663b">Digital Stethoscopes</span>.
+      </p>
+
+      <div class="buttonArena" style="position: relative">
+        <div
+          id="spinner"
+          class="spinner-border text-dark"
+          style="display: none"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+        <form
+          id="uploadForm"
+          enctype="multipart/form-data"
+          action="/respiratory"
+          method="POST"
+          style="position: relative"
+        >
+          <input
+            class="input-file"
+            type="file"
+            name="uploaded-audio"
+            name="file"
+            style="opacity: 0;"
+          />
+          <div style="position: absolute; z-index: -1; top: 0px; left: 1rem">
+            <div class="uploadBtn">Try it</div>
+          </div>
+          <button type="submit" class="predict" id="btn-predict">
+            <span class="btn-predict-text">Predict</span>
+          </button>
+        </form>
+      </div>
+
+      {% if got_prediction == True %}
+      <div id="results">
+        <h2
+          style="
+            margin: 2rem 0 0.5rem 0;
+            font-family: 'DM Serif Display', serif;
+          "
+        >
+          Diagnosis Result
+        </h2>
+
+        <hr
+          class="mt-1 mb-3"
+          style="background-color: #1a663b; width: 25vw; float: left"
+        />
+        <br />
+
+        <table style="border-collapse: separate; border-spacing: 1rem">
+          <tr>
+            <td>
+              <h4 class="probabilities">{{ prediction[0] }}%</h4>
+            </td>
+            <td><div class="resultCat">{{ classes[0] }}</div></td>
+            <td>
+              <h4 class="probabilities">{{ prediction[1] }}%</h4>
+            </td>
+            <td><div class="resultCat">{{ classes[1] }}</div></td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="probabilities">{{ prediction[2] }}%</h4>
+            </td>
+            <td>
+              <div class="resultCat">{{ classes[2] }}</div>
+            </td>
+            <td>
+              <h4 class="probabilities">{{ prediction[3] }}%</h4>
+            </td>
+            <td><div class="resultCat">{{ classes[3] }}</div></td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="probabilities">{{ prediction[4] }}%</h4>
+            </td>
+            <td><div class="resultCat">{{ classes[4] }}</div></td>
+            <td>
+              <h4 class="probabilities">{{ prediction[5] }}%</h4>
+            </td>
+            <td><div class="resultCat">{{ classes[5] }}</div></td>
+          </tr>
+        </table>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
