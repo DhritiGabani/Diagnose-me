@@ -8,7 +8,7 @@ A web application powered by deep learning to predict respiratory disorders, hea
 
 ## Link to the web app
 https://diagnose-me-vxbb.onrender.com <br/>
-Please wait for a minute for the web app to load as it is deployed on Heroku.
+Please wait for a minute for the web app to load as it is deployed on Render.com.
 
 
 ![Bot Description](https://github.com/DhritiGabani/Diagnose-me/blob/master/UI%20Design/homepage.png?raw=true)
