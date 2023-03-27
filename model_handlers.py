@@ -32,7 +32,7 @@ def heart_disease_model(data):
     X_test = np.array(data)
 
     df = pd.DataFrame(data=X_test).T
-    prediction = None
+    prediction = []
     if '' not in X_test:
         prediction = model.predict(df)
         print(prediction[0])
